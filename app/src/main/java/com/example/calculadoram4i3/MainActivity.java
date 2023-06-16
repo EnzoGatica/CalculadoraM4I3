@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         Button division = findViewById(R.id.division);
         Button multiplicacion = findViewById(R.id.multiplicacion);
 
-
+        Toast.makeText(this, "hi", Toast.LENGTH_LONG).show();
+        //Snackbar.make(MainActivity, "hi",Snackbar.LENGTH_LONG).show()
 
 
         suma.setOnClickListener(new View.OnClickListener() {
@@ -38,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 int numero2 = Integer.parseInt(num2.getText().toString());
                 int resultado = numero1 + numero2;
                 textResultado.setText("Resultado: " + resultado);
+                Toast.makeText(getBaseContext(), "Apretaste Suma", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -48,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 int numero2 = Integer.parseInt(num2.getText().toString());
                 int resultado = numero1 - numero2;
                 textResultado.setText("Resultado: " + resultado);
+                Toast.makeText(getBaseContext(), "Apretaste Resta", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -58,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 double numero2 = Double.parseDouble(num2.getText().toString());
                 double resultado = numero1 / numero2;
                 textResultado.setText("Resultado: " + resultado);
+                Toast.makeText(getBaseContext(), "Apretaste Division", Toast.LENGTH_LONG).show();
             }
         });
 
@@ -68,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 double numero2 = Double.parseDouble(num2.getText().toString());
                 double resultado = numero1 * numero2;
                 textResultado.setText("Resultado: " + resultado);
+                Toast.makeText(getBaseContext(), "Apretaste Multiplicacion", Toast.LENGTH_LONG).show();
             }
         });
 
