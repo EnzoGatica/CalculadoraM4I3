@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty()){
                     Toast.makeText(getBaseContext(),"Rellenar los campos vacios.", Toast.LENGTH_LONG).show();
                 }else {
-                    int numero1 = Integer.parseInt(num1.getText().toString());
-                    int numero2 = Integer.parseInt(num2.getText().toString());
-                    int resultado = numero1 + numero2;
+                    double numero1 = Double.parseDouble(num1.getText().toString());
+                    double numero2 = Double.parseDouble(num2.getText().toString());
+                    double resultado = numero1 + numero2;
                     textResultado.setText("Resultado: " + resultado);
-                    Toast.makeText(getBaseContext(), "Apretaste Suma, resultado: " + resultado, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Apretaste Sumar, resultado: " + resultado, Toast.LENGTH_LONG).show();
                 }
 
 
@@ -62,11 +62,11 @@ public class MainActivity extends AppCompatActivity {
                 if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty()){
                     Toast.makeText(getBaseContext(),"Rellenar los campos vacios.", Toast.LENGTH_LONG).show();
                 }else {
-                    int numero1 = Integer.parseInt(num1.getText().toString());
-                    int numero2 = Integer.parseInt(num2.getText().toString());
-                    int resultado = numero1 - numero2;
+                    double numero1 = Double.parseDouble(num1.getText().toString());
+                    double numero2 = Double.parseDouble(num2.getText().toString());
+                    double resultado = numero1 - numero2;
                     textResultado.setText("Resultado: " + resultado);
-                    Toast.makeText(getBaseContext(), "Apretaste resta, resultado: " + resultado, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getBaseContext(), "Apretaste Resta, resultado: " + resultado, Toast.LENGTH_LONG).show();
                 }
 
             }
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty()){
+                if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty() || Integer.parseInt(num2.getText().toString()) == 0){
                     Toast.makeText(getBaseContext(),"Rellenar los campos vacios.", Toast.LENGTH_LONG).show();
                 }else {
                     double numero1 = Double.parseDouble(num1.getText().toString());
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty()){
+                if(num1.getText().toString().isEmpty() || num2.getText().toString().isEmpty() ){
                     Toast.makeText(getBaseContext(),"Rellenar los campos vacios.", Toast.LENGTH_LONG).show();
                 }else {
 
